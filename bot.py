@@ -3,14 +3,11 @@ import tweepy
 import time
 import json
 
-from tweepy.error import RateLimitError
+consumer_key = '1234'
+consumer_secret = '1234'
 
-
-consumer_key = 'OFO4OrByzNneZr20lBbkaKbn5'
-consumer_secret = '7zTJ76L7dn1894Sl2tVRL6d321qf3GG77HlQRvZuMQpeOQBDpF'
-
-access_token = "1404836264206024712-1f3eSZamN1F9Y5tkaW8LYJeUFRC09G"
-access_token_secret = "RoCZAFyAyxPl4lnDXDy847JMurwMcClTxdSExZX8NkmUL"
+access_token = "1234"
+access_token_secret = "1234"
 
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -163,6 +160,7 @@ def replyToQuestion(tweet):
     except tweepy.TweepError as e:
         print(e.reason)
 
+# actually listening / checking for tweets where bot is mentioned 
 
 def listen_for_mentions():
     mentions = api.mentions_timeline(
